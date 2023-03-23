@@ -1,3 +1,9 @@
+package br.com.dio.desafio.dominio;
+
+import java.util.Set;
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 public class Bootcamp {
 
@@ -51,6 +57,6 @@ public class Bootcamp {
         this.conteudos = conteudos;
     }
 
-    //IMPLENTAR EQUALS E HASHCODE
+    // IMPLENTAR EQUALS E HASHCODE
 
 }

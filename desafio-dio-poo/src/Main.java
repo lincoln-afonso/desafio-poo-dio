@@ -1,5 +1,9 @@
-import br.com.dio.desafio.br.com.dio.desafio.dominio.Curso;
-import br.com.dio.desafio.br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.Curso;
+import br.com.dio.desafio.dominio.Dev;
+import br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.Bootcamp;
+
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,12 +20,12 @@ public class Main {
         System.out.println(curso1);
         System.out.println(curso2);
 
-        /* //POLIMORFISMO (CRIANDO UM CURSO A PARTIR DA CLASSE CONTEUDO)
-         * Conteudo conteudo1 = new Curso();
-         * Conteudo conteudo2 = new Mentoria();
+        /*
+         * //POLIMORFISMO (CRIANDO UM CURSO A PARTIR DA CLASSE CONTEUDO) Conteudo
+         * conteudo1 = new Curso(); Conteudo conteudo2 = new Mentoria();
          */
 
-
+        ///
         Mentoria mentoria = new Mentoria();
         mentoria.setTitulo("Mentoria java");
         mentoria.setDescricao("java");
@@ -32,29 +36,29 @@ public class Main {
         Bootcamp bootcamp = new Bootcamp();
         bootcamp.setNome("Java developer");
         bootcamp.setDescricao("Bootcamp Java developer");
-        bootcamp.getConteudo().add(curso1);
-        bootcamp.getConteudo().add(curso2);
-        bootcamp.getConteudo().add(mentoria);
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
 
         Dev devLincoln = new Dev();
         devLincoln.setNome("Lincoln");
-        devLincoln.inscreverBootcamp(bootcamp);
-        System.out.println("Conteudo inscritos: " + devLincoln.getConteudosInscritos());
+        devLincoln.inscreverBootCamp(bootcamp);
+        System.out.println("Conteudo inscritos: " + devLincoln.getConteudoInscritos());
         devLincoln.progredir();
         devLincoln.progredir();
-        System.out.println("Conteudo inscritos: " + devLincoln.getConteudosInscritos());
-        System.out.println("Conteudo concluídos: " + devLincoln.getConteudosConcluidos());
+        System.out.println("Conteudo inscritos: " + devLincoln.getConteudoInscritos());
+        System.out.println("Conteudo concluídos: " + devLincoln.getConteudoConcluidos());
         System.out.println("XP: " + devLincoln.calcularTotalXp());
 
         System.out.println("");
 
         Dev devJose = new Dev();
         devJose.setNome("Jose");
-        devJose.inscreverBootcamp(bootcamp);
-        System.out.println("Conteudo inscritos: " + devJose.getConteudosInscritos());
-        jose.progredir();
-        System.out.println("Conteudo inscritos: " + devJose.getConteudosInscritos());
-        System.out.println("Conteudo concluídos: " + devJose.getConteudosConcluidos());
+        devJose.inscreverBootCamp(bootcamp);
+        System.out.println("Conteudo inscritos: " + devJose.getConteudoInscritos());
+        devJose.progredir();
+        System.out.println("Conteudo inscritos: " + devJose.getConteudoInscritos());
+        System.out.println("Conteudo concluídos: " + devJose.getConteudoConcluidos());
         System.out.println("XP: " + devLincoln.calcularTotalXp());
     }
 }

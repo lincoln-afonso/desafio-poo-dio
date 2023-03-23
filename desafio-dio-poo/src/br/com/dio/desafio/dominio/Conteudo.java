@@ -1,17 +1,21 @@
 package br.com.dio.desafio.dominio;
 
 public abstract class Conteudo {
-    protected double final XP_PADRAO = 10;
+    protected final double XP_PADRAO = 10;
 
     private String titulo;
     private String descricao;
 
-    public Conteudo(){
+    public Conteudo() {
     }
 
     public Conteudo(String titulo, String descricao) {
         this.titulo = titulo;
         this.descricao = descricao;
+    }
+
+    public final double getXpPadrao() {
+        return XP_PADRAO;
     }
 
     public String getTitulo() {
